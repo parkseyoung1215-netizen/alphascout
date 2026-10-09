@@ -11,10 +11,11 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
 ## 2. Entries
 
 ### Oct __
-- What I did:
-- Where I got stuck:
-- My decision and why:
-- Result:
+### Early Oct
+- What I did: I made the code calculate the scores. The AI (gpt-4o-mini) only judges whether each signal is supported by evidence.
+- Where I got stuck: If the AI is allowed to calculate the score too, it can make up a score from its own opinion even when evidence is missing. I saw this many times in my early tests.
+- My decision and why: I chose to let the code calculate the score, so the AI cannot invent a score without evidence. When the code calculates the score, the evidence and sources can be shown next to it, which makes the result easier to trust.
+- Result: When I ran the analysis again, the scores stayed within a small range (an error range). The scores can still change a little, because the search results are different each time.
 
 ## 3. Problems I found and what I did
 - Problem:
