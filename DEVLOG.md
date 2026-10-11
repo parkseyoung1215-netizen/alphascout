@@ -68,9 +68,10 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
   What I changed: I asked Bolt to remove the permissions to change, delete and add records, and keep only reading. Bolt reported that the app still loads saved results. I also opened the live site and checked that saved results still open.
   
 ## 4. Mentor feedback
-- Who (role only):
-- What I heard:
-- What I changed:
+## 4. Mentor feedback
+- Who: Mingi Hong, Senior Software Engineer at Bolt in Tallinn (a different company from bolt.new, which I used to build AlphaScout). I use his name with his permission.
+- What I heard (Oct __): He said he does not know venture capital, so he could not give feedback on the VC side. Looking only at the product, he said it does not look different: why should someone use it instead of GPT or Claude? He said a one-sentence description of what the service is would help. He also said I should not make it too broad, and I could try a narrower, more specific service.
+- What I changed: Not yet.
 - What happened after:
 
 ## 5. Not done yet / next steps
@@ -80,3 +81,4 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
 - New analyses need the user's own OpenAI key. Saved results can be viewed without a key.
 - The 20 signals are my own interpretation of a16z's way of thinking, not an official rule (see section 1).
 - Next experiment: a test entrance where fake pages go in without search, to measure how the system reacts to bad evidence.
+- Write a one-sentence description of AlphaScout, and be able to answer "why not just use GPT or Claude?"
