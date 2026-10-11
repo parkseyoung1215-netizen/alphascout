@@ -63,6 +63,10 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
   How I noticed: Every input failed with "Failed to fetch". The causes were a renamed function parameter that was still used under the old name, then a variable declared twice (the server could not start at all).
   What I changed: Fixed both, then added the health check and a server status indicator on the page so I can see a broken deploy without spending search credits.
 
+- Problem: The database was set up so that anyone who had the public key (which is included in the site's code) could change, delete or add saved analysis records, even though the site itself has no button for this. I have no sign that anyone actually did this, but the setting allowed it.
+  How I noticed: I asked Claude to point out weaknesses and things to criticize in my finished project. Claude pointed out this problem. I did not just trust it: I checked the migration file in my repository, and the policies were really there.
+  What I changed: I asked Bolt to remove the permissions to change, delete and add records, and keep only reading. Bolt reported that the app still loads saved results. I also opened the live site and checked that saved results still open.
+  
 ## 4. Mentor feedback
 - Who (role only):
 - What I heard:
