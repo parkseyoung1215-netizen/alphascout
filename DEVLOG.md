@@ -68,10 +68,9 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
   What I changed: I asked Bolt to remove the permissions to change, delete and add records, and keep only reading. Bolt reported that the app still loads saved results. I also opened the live site and checked that saved results still open.
   
 ## 4. Mentor feedback
-## 4. Mentor feedback
 - Who: Mingi Hong, Senior Software Engineer at Bolt in Tallinn (a different company from bolt.new, which I used to build AlphaScout). I use his name with his permission.
 - What I heard (Oct __): He said he does not know venture capital, so he could not give feedback on the VC side. Looking only at the product, he said it does not look different: why should someone use it instead of GPT or Claude? He said a one-sentence description of what the service is would help. He also said I should not make it too broad, and I could try a narrower, more specific service.
-- What I changed: Not yet.
+- What I changed: I added a one-line description at the top of the README and a short "Why not just ask GPT or Claude?" section. I have not made the service narrower yet.
 - What happened after:
 
 ## 5. Not done yet / next steps
@@ -82,3 +81,6 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
 - The 20 signals are my own interpretation of a16z's way of thinking, not an official rule (see section 1).
 - Next experiment: a test entrance where fake pages go in without search, to measure how the system reacts to bad evidence.
 - Write a one-sentence description of AlphaScout, and be able to answer "why not just use GPT or Claude?"
+- Tesla was put on hold even though a lot of public information exists about it. Each pillar is built from 5 signals, and at least half of them need evidence before a score is shown. Only 2 were found. I also designed the app so that if one pillar is on hold, the other pillars alone cannot produce an overall score. I do not know yet whether the evidence was missing from the search or removed by my filter.
+- For a small company I tested, the app shows a description of the company, but there is too little information, so every pillar came out on hold. I think this is both a strength and a limitation.
+- I have not changed this yet. I decided it is too early to judge a company with so little information, and that is also the reason I count it as a strength.
