@@ -1,6 +1,6 @@
 # AlphaScout
 
-An AI web app that analyzes companies and technologies from a venture-capital perspective.
+AlphaScout analyzes companies from a venture capitalist's point of view, and it shows no score when the evidence is not enough.
 
 **Live:** https://venture-capital-tech-ida1.bolt.host
 
@@ -9,6 +9,10 @@ An AI web app that analyzes companies and technologies from a venture-capital pe
 ## What it does
 
 Enter a company name. The app gathers evidence through web search, then evaluates 20 fixed signals (5 in each of 4 pillars) and produces a score.
+
+## Why not just ask GPT or Claude?
+
+A general chatbot can give an answer even when it has only a few signals to go on. AlphaScout does not. It checks every company with the same 20 signals under the same rules. If there is not enough evidence, it shows "on hold" instead of a score.
 
 ## How it works
 
