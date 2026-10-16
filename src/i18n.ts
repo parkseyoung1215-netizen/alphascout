@@ -106,6 +106,14 @@ export const STRINGS = {
   rationale: { ko: '평가 근거', en: 'Rationale' },
   holdLabel: { ko: '보류', en: 'Hold' },
 
+  // How to read this score (collapsible box)
+  howToReadTitle: { ko: '점수 읽는 법', en: 'How to read this score' },
+  howToReadScore: { ko: '점수: 각 축과 종합 점수는 1.0~5.0입니다. 점수는 AI가 정하지 않고, 20개 고정 신호(축당 5개)를 바탕으로 코드가 계산합니다.', en: 'Score: Each pillar and the overall score go from 1.0 to 5.0. Scores are calculated by code from 20 fixed signals (5 per pillar), not chosen by the AI.' },
+  howToReadGrades: { ko: '등급', en: 'Grades' },
+  howToReadUnknown: { ko: '"알 수 없음": 그 신호에 대한 근거를 찾지 못했다는 뜻입니다.', en: '"Unknown": no evidence was found for that signal.' },
+  howToReadHold: { ko: '"보류": 한 축의 신호 5개 중 근거가 있는 것이 절반 미만이면 그 축은 점수를 표시하지 않습니다. 한 축이라도 보류면 종합 점수도 보류됩니다. 근거가 없으면 점수도 없다는 원칙에 따른 것입니다.', en: '"Hold": if fewer than half of a pillar\'s 5 signals have evidence, that pillar shows no score. If any pillar is on hold, the overall score is also on hold. This is on purpose: no evidence, no score.' },
+  howToReadNote: { ko: '참고: 초기 단계나 작은 회사는 공개 자료가 적어서 보류가 더 자주 나올 수 있습니다.', en: 'Note: Early-stage or small companies often have little public information, so they may be put on hold more often.' },
+
   // Judgment labels (stored value → display label)
   judgGood: { ko: '좋음', en: 'Good' },
   judgAverage: { ko: '보통', en: 'Average' },

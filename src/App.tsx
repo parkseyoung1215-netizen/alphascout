@@ -1093,6 +1093,8 @@ function OverallScoreSection({ result, lang }: { result: ScanResult; lang: Lang 
             <p className="text-sm text-zinc-300 leading-relaxed font-korean">{displayRationale(rationale, isHold, lang)}</p>
           </div>
         )}
+
+        <HowToReadScore lang={lang} />
       </div>
     </div>
   );
@@ -1153,6 +1155,52 @@ function displayRationale(rationale: string, isHold: boolean, lang: Lang): strin
     return `${t('tmplScoreSummary', lang)} (${t('tmplEvidenceRatio', lang)} ${match[1]}/${match[2]})`;
   }
   return rationale;
+}
+
+function HowToReadScore({ lang }: { lang: Lang }) {
+  const [open, setOpen] = useState(false);
+  const grades: [string, string][] = [
+    ['A+', '4.7+'],
+    ['A', '4.5–4.69'],
+    ['A-', '4.3–4.49'],
+    ['B+', '4.0–4.29'],
+    ['B', '3.7–3.99'],
+    ['B-', '3.4–3.69'],
+    ['C+', '3.0–3.39'],
+    ['C', '2.5–2.99'],
+    ['D', lang === 'en' ? 'below 2.5' : '2.5 미만'],
+  ];
+  return (
+    <div className="rounded-xl border border-zinc-800/60 bg-zinc-900/40 overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center gap-2 px-3 py-2.5 hover:bg-zinc-900/60 transition-colors"
+      >
+        <HelpCircle className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
+        <span className="text-xs font-medium text-zinc-400 font-korean flex-1 text-left">{t('howToReadTitle', lang)}</span>
+        <ChevronDown className={`w-3.5 h-3.5 text-zinc-600 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="px-3 pb-3 pt-1 space-y-2.5 animate-fade-in">
+          <p className="text-[11px] text-zinc-500 leading-relaxed font-korean">{t('howToReadScore', lang)}</p>
+          <div>
+            <p className="text-[11px] text-zinc-500 mb-1 font-korean">{t('howToReadGrades', lang)}</p>
+            <div className="grid grid-cols-3 sm:grid-cols-3 gap-1.5">
+              {grades.map(([grade, range]) => (
+                <div key={grade} className="flex items-center gap-1.5 rounded border border-zinc-800/60 bg-zinc-900/50 px-2 py-1">
+                  <span className="text-[10px] font-bold font-mono text-zinc-300">{grade}</span>
+                  <span className="text-[9px] font-mono text-zinc-600">{range}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="text-[11px] text-zinc-500 leading-relaxed font-korean">{t('howToReadUnknown', lang)}</p>
+          <p className="text-[11px] text-zinc-500 leading-relaxed font-korean">{t('howToReadHold', lang)}</p>
+          <p className="text-[11px] text-zinc-500 leading-relaxed font-korean">{t('howToReadNote', lang)}</p>
+        </div>
+      )}
+    </div>
+  );
 }
 
 function PillarCard({ pillar, index, lang }: { pillar: { label: string; data: PillarScore; icon: React.ComponentType<{ className?: string }> }; index: number; lang: Lang }) {
