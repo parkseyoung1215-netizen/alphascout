@@ -31,7 +31,8 @@ A general chatbot can give an answer even when it has only a few signals to go o
 ## Known limitations
 
 - Search results differ between runs, so scores can vary.
-- Companies with little evidence come out as "evaluation on hold" (observed, for example, in Tesla's Execution pillar).
+- "Evaluation on hold" does not always mean the company has little public information. In my 12-company test, Tesla and OpenAI were on hold even though a lot of information about them exists, while smaller companies like ElevenLabs got a score. See DEVLOG (Oct 17).
+- Execution & Traction came out as 5.0 for almost every company that got a score, so this pillar does not separate companies well yet.
 - A company-owned domain (for example, a subdomain) can be misclassified as an "independent source".
 - Low-reliability sources (such as social media posts) are sometimes used as evidence.
 - An analysis takes 30 to 50 seconds.
@@ -45,7 +46,7 @@ A general chatbot can give an answer even when it has only a few signals to go o
 
 ## Author
 
-Seoyoung Park
+Seyoung Park
 
 ## Feedback
 
