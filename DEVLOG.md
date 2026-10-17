@@ -49,6 +49,32 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
 - Result: Around 5 AM I added saving results. The first run of a company does the full analysis. Running it again returns the saved result in about 1 second, with a "run new analysis" button. I counted this as the first complete version.
 - Also added: key check before searching, request limits per IP, blocking internal addresses, response size limit, a daily limit of 20 analyses, and a health check that costs no search credits. I also added internationalization (i18n) support and translation in the edge function.
 
+  
+### Oct 17 (12 companies)
+
+- What I did: I analyzed 12 companies and recorded the results.
+
+| Company | Overall | Evidence | Market & Timing | Product & Moat | Execution & Traction | Risk |
+|---|---|---|---|---|---|---|
+| NVIDIA | 4.3 (A-) | 18/20 | 5.0 | 5.0 | 5.0 | 2.4 |
+| Samsung | 4.3 (A-) | 16/20 | 3.7 | 5.0 | 5.0 | 3.5 |
+| SK hynix | 4.2 (B+) | 16/20 | 4.5 | 4.3 | 5.0 | 3.0 |
+| Boston Dynamics | 4.2 (B+) | 17/20 | 4.6 | 4.6 | 5.0 | 2.7 |
+| ElevenLabs | 4.1 (B+) | 18/20 | 4.2 | 4.3 | 5.0 | 3.0 |
+| Anthropic | 4.0 (B+) | 18/20 | 4.0 | 4.2 | 5.0 | 3.0 |
+| Mistral AI | 3.7 (B) | 19/20 | 4.4 | 2.6 | 5.0 | 3.0 |
+| Tesla | Hold | 17/20 | 3.7 | 4.6 | Hold | 1.8 |
+| OpenAI | Hold | 13/20 | Hold | Hold | 5.0 | 1.3 |
+| tavus | Hold | 11/20 | 4.0 | Hold | 4.6 | Hold |
+| GitHub microsoft/BitNet | Hold | 7/20 | Hold | 5.0 | Hold | Hold |
+| Lyrid | Hold | 4/20 | Hold | Hold | Hold | Hold |
+
+- What surprised me: Even after I changed to AI-based search, some parts of the results stayed consistent, which I found interesting.
+- Where I got stuck: When companies with a huge amount of information, like Tesla and OpenAI, came out on hold, I had to think about whether I should fix this or keep the standard as it is.
+- What I thought: Execution & Traction was almost always 5.0. Seeing this, I thought I should later add a system that looks at a company's products from a consumer's point of view and scores them.
+- My decision and why: For now I only recorded these problems. I want to collect the different weaknesses first, and then fix them together, because fixing one weakness can create a new weakness somewhere else.
+- Next: If I fix it next time, I want to make AlphaScout easier to use by adding experts' opinions and more easy-to-understand information.
+
 ## 3. Problems I found and what I did
 
 - Problem: tavus got 4.3 with range 4.3 to 4.3, and I read it as "all 20 signals have evidence".
@@ -71,8 +97,12 @@ I wondered: if I combine a venture capitalist's way of thinking with an AI's ana
 - Who: Mingi Hong, Senior Software Engineer at Bolt in Tallinn (a different company from bolt.new, which I used to build AlphaScout). I use his name with his permission.
 - What I heard (Oct 11): He said he does not know venture capital, so he could not give feedback on the VC side. Looking only at the product, he said it does not look different: why should someone use it instead of GPT or Claude? He said a one-sentence description of what the service is would help. He also said I should not make it too broad, and I could try a narrower, more specific service.
 - What I changed: I added a one-line description at the top of the README and a short "Why not just ask GPT or Claude?" section. I have not made the service narrower yet.
-- What happened after:
 
+- Who: Dragos Gavrilescu, Co-Founder & CEO at Design Thinking Society (I met him through ADPList). I use his name with his permission.
+- What I heard (Oct 16): He said AlphaScout is a good starting point and covers common weaknesses well, but the target customers seem too broad.
+- What I thought: I thought I should choose a specific customer group and develop AlphaScout further in that direction.
+- My decision and why: I decided not to change the target. This is what I wanted to do from the start, and I planned AlphaScout as a product for venture capitalists.
+  
 ## 5. Not done yet / next steps
 - Get feedback from a few people (VC / startup / developers) before changing more.
 - Check scores against companies I know well (about 10: big companies, growing startups, failed companies).
